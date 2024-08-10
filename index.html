@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
@@ -8,18 +9,21 @@
 </head>
 <body>
     <div class="container">
+        <div class="language-switcher">
+            <span id="language-label">Language</span>
+            <button onclick="switchLanguage('en')">English</button>
+            <button onclick="switchLanguage('ru')">Русский</button>
+        </div>
+
         <div class="calculator">
             <input type="text" id="expression" class="expression" placeholder="Enter expression">
             
-            <!-- Центрируем кнопку = -->
             <button id="calculate-btn" onclick="calculateExpression()">=</button>
             
             <input type="text" id="result" class="result" readonly placeholder="Result">
             
-            <!-- Добавляем кнопку "Ровно" -->
             <button id="equal-btn" onclick="insertSymbol('=')">"="</button>
 
-            <!-- Кнопки операций -->
             <div class="operation-buttons">
                 <button onclick="insertSymbol('+')">+</button>
                 <button onclick="insertSymbol('-')">-</button>
@@ -27,12 +31,10 @@
                 <button onclick="insertSymbol('/')">÷</button>
             </div>
 
-            <!-- Кнопка удаления последнего символа -->
             <button id="delete-btn" onclick="deleteLastSymbol()">⌦</button>
         </div>
 
         <div class="side-panel">
-            <!-- Числа -->
             <div class="numbers">
                 <h3>Numbers</h3>
                 <div class="number-buttons">
@@ -49,7 +51,6 @@
                 </div>
             </div>
             
-            <!-- Степени -->
             <div class="powers">
                 <h3>Powers</h3>
                 <div class="power-buttons">
@@ -68,7 +69,6 @@
         </div>
     </div>
 
-    <!-- Подключаем библиотеку algebra.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/algebra.js/0.2.6/algebra.min.js"></script>
     <script src="script.js"></script>
 </body>
