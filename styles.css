@@ -8,12 +8,18 @@ body {
     margin: 0;
 }
 
+.container {
+    display: flex;
+    gap: 20px;
+}
+
 .calculator {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
+    text-align: center; /* Центрирование контента */
 }
 
 .expression, .result {
@@ -26,16 +32,51 @@ body {
     box-sizing: border-box;
 }
 
-.buttons {
+#calculate-btn, #equal-btn {
+    width: 80px;
+    padding: 10px;
+    font-size: 18px;
+    background: linear-gradient(120deg, Blue, Purple);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.number-buttons, .power-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.operation-buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+    margin-bottom: 10px;
+}
+
+#delete-btn {
+    width: 65px;
+    padding: 15px;
+    font-size: 33px; /* Увеличиваем размер текста */
+    font-weight: bold; /* Делаем текст жирным */
+    text-align: left;
+    line-height: 1; /* Уменьшаем высоту строки, чтобы текст не увеличивал размер кнопки */
+    background: linear-gradient(120deg, red, rgb(255, 123, 0));
+    color: rgb(238, 255, 0);
+    border: none;
+    border-radius: 20px;
+    margin-top: 10px;
+    cursor: pointer;
 }
 
 button {
     padding: 15px;
     font-size: 18px;
-    background-color: #007bff;
+    background: linear-gradient(120deg, Blue, Purple);
     color: white;
     border: none;
     border-radius: 5px;
@@ -45,4 +86,15 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+.side-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.side-panel h3 {
+    margin-bottom: 10px;
+    text-align: center;
 }
