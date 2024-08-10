@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="expression" class="expression" placeholder="Enter expression">
+        <input type="text" id="result" class="result" readonly placeholder="Result">
+        <div class="buttons">
+            <button onclick="insertSymbol('+')">+</button>
+            <button onclick="insertSymbol('-')">-</button>
+            <button onclick="insertSymbol('*')">×</button>
+            <button onclick="insertSymbol('/')">÷</button>
+            <button onclick="insertSymbol('²')">²</button>
+            <button onclick="insertSymbol('³')">³</button>
+            <button onclick="insertSymbol('⁴')">⁴</button>
+            <button onclick="insertSymbol('⁵')">⁵</button>
+            <button onclick="insertSymbol('⁶')">⁶</button>
+            <button onclick="insertSymbol('⁷')">⁷</button>
+            <button onclick="insertSymbol('⁸')">⁸</button>
+            <button onclick="insertSymbol('⁹')">⁹</button>
+            <button onclick="insertSymbol('¹')">¹</button>
+            <button onclick="calculateExpression()">=</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
