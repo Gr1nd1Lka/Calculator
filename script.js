@@ -1,13 +1,11 @@
 function insertSymbol(symbol) {
     const expressionField = document.getElementById('expression');
     expressionField.value += symbol;
-    expressionField.focus();  // Сразу после вставки символа устанавливаем фокус на поле ввода
 }
 
 function deleteLastSymbol() {
     const expressionField = document.getElementById('expression');
     expressionField.value = expressionField.value.slice(0, -1);
-    expressionField.focus();  // После удаления фокус остаётся на поле ввода
 }
 
 function calculateExpression() {
